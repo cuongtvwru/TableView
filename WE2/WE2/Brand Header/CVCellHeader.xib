@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderCVCell" id="A9c-d0-8xB" customClass="HeaderCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="57" height="42"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="57" height="42"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button tag="100" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLV-qP-Hgg">
+                        <rect key="frame" x="0.0" y="15" width="57" height="12"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                        <state key="normal" title="Button">
+                            <color key="titleColor" red="0.12156862745098039" green="0.15686274509803921" blue="0.17254901960784313" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="button:" destination="A9c-d0-8xB" eventType="touchUpInside" id="czK-uJ-QD1"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="GLV-qP-Hgg" secondAttribute="bottom" constant="15" id="CZc-yK-BSg"/>
+                <constraint firstItem="GLV-qP-Hgg" firstAttribute="leading" secondItem="A9c-d0-8xB" secondAttribute="leading" id="UGi-Mi-wXk"/>
+                <constraint firstAttribute="trailing" secondItem="GLV-qP-Hgg" secondAttribute="trailing" id="gc7-ZW-ow2"/>
+                <constraint firstItem="GLV-qP-Hgg" firstAttribute="top" secondItem="A9c-d0-8xB" secondAttribute="top" constant="15" id="noX-XA-kbq"/>
+            </constraints>
+            <connections>
+                <outlet property="button1" destination="GLV-qP-Hgg" id="Xbd-36-b7v"/>
+            </connections>
+            <point key="canvasLocation" x="26.5" y="97"/>
+        </collectionViewCell>
+    </objects>
+</document>

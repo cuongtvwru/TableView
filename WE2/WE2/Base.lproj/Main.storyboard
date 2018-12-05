@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iof-IN-SM5">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uZT-7t-Yw7"/>
+                        <viewControllerLayoutGuide type="bottom" id="wqe-CE-6Qu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dEJ-ze-3kx">
+                                <rect key="frame" x="0.0" y="256" width="320" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3DS-Zm-cgJ">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="y9P-Qt-6KC"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xIZ-bq-Ztr"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3DS-Zm-cgJ" firstAttribute="top" secondItem="uZT-7t-Yw7" secondAttribute="bottom" id="CwW-Hl-5iY"/>
+                            <constraint firstAttribute="trailing" secondItem="3DS-Zm-cgJ" secondAttribute="trailing" id="Gyr-nv-Caq"/>
+                            <constraint firstItem="3DS-Zm-cgJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Naa-Br-rCC"/>
+                            <constraint firstItem="wqe-CE-6Qu" firstAttribute="top" secondItem="3DS-Zm-cgJ" secondAttribute="bottom" id="V5a-73-EUj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5kA-M2-kRb">
+                        <nil key="title"/>
+                        <textField key="titleView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="search" textAlignment="center" minimumFontSize="13" id="mez-8q-J1X">
+                            <rect key="frame" x="10" y="7" width="300" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            <connections>
+                                <outlet property="delegate" destination="BYZ-38-t0r" id="0sH-W2-mYs"/>
+                            </connections>
+                        </textField>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchTF" destination="mez-8q-J1X" id="EA7-Z8-4Sv"/>
+                        <outlet property="tableView" destination="3DS-Zm-cgJ" id="Qu2-Pd-ETE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2131.875" y="130.98591549295776"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ViV-Xk-vQk">
+            <objects>
+                <navigationController storyboardIdentifier="VC" automaticallyAdjustsScrollViewInsets="NO" id="NlY-b3-ZKp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="6-01.png" id="Ly9-eo-3nL">
+                        <inset key="imageInsets" minX="0.0" minY="15" maxX="0.0" maxY="15"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aGu-lG-u6e">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rbO-i8-3Va"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q2i-WF-vlM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1134.375" y="130.98591549295776"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="U3p-Gk-eil">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="iof-IN-SM5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Ax-1Q-IIf">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="NlY-b3-ZKp" kind="relationship" relationship="viewControllers" id="4FA-gc-iYa"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xMm-yv-vOO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="746"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="6-01.png" width="42" height="40"/>
+    </resources>
+</document>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController2">
+            <connections>
+                <outlet property="collectionView" destination="rtC-CA-VAc" id="z5M-wD-EkW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbW-j8-fbJ">
+                    <rect key="frame" x="3" y="24" width="28" height="22"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="8"/>
+                    <state key="normal" title="Done">
+                        <color key="titleColor" red="0.090196078430000007" green="0.086274509799999996" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="doneButton:" destination="-1" eventType="touchUpInside" id="zaZ-zJ-Kem"/>
+                    </connections>
+                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="rtC-CA-VAc">
+                    <rect key="frame" x="12" y="54" width="297" height="514"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="RSY-IY-Jt9">
+                        <size key="itemSize" width="95" height="95"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rtC-CA-VAc" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="6Hv-hb-6cC"/>
+                <constraint firstItem="rtC-CA-VAc" firstAttribute="top" secondItem="xbW-j8-fbJ" secondAttribute="bottom" constant="8" id="TPO-ts-lHx"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="xbW-j8-fbJ" secondAttribute="trailing" constant="289" id="Uah-Gc-OeI"/>
+                <constraint firstItem="xbW-j8-fbJ" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="4" id="XKI-ZB-7UD"/>
+                <constraint firstItem="xbW-j8-fbJ" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="3" id="dQ4-bQ-5Hm"/>
+                <constraint firstItem="rtC-CA-VAc" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="12" id="hc1-fv-3O3"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="rtC-CA-VAc" secondAttribute="trailing" constant="11" id="pl8-Gs-Eq8"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+</document>
